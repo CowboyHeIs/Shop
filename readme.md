@@ -6,7 +6,12 @@ Questions :
 5. Why is the Django model called an ORM?
 
 Answer :
-1. By failing multiple times I could know where it went wrong. Then I read the assignment trying to understand it the best that i can (hopefully no missunderstandings) and add some features I'm willing to try. got info from w3schools.com then start using products.
+1. By failing multiple times I could know where it went wrong. Then I read the assignment trying to understand it the best that i can (hopefully no missunderstandings) and add some features I'm willing to try. got info from w3schools.com then start using products. here's the steps :
+	1. Redo Tutorial 0 for 3 weeks due to failure in many attemps due to missunderstandings on my part on which should be with which, what is what, and anything inside.
+	2. After succesfully deploying tutorial 0, I went straight to Assignment2 due to fear of being late.
+	3. Follow tutorial 1 with few but more than 3 missunderstandings (luckily).
+	4. Learn about the application connections (as in what goes to where).
+	5. Learn HTML due to my hatred towards light mode.
 2. Request > urls.py > views.py > models.py > main.html > html response
 3. In my mind, it's for ease-of-use, as I recall, like in our first year's task where we need to make a website for our peers, and the easiest is to use github to supervise the project while also making it accessible.
 4. The easiest (since it's using python).
