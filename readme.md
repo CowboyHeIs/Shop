@@ -6,8 +6,8 @@ Questions :
 5. Why is the Django model called an ORM?
 
 Answer :
-1. By failing multiple times I could know where it went wrong.
-2. Check this :
-3. In my mind, it's for ease of use such as in our first year's task where we need to make a website for our peers, and the easiest is to use git.
-4. The easiest.
-5. 
+1. By failing multiple times I could know where it went wrong. Then I read the assignment trying to understand it the best that i can (hopefully no missunderstandings) and add some features I'm willing to try. got info from w3schools.com then start using products.
+2. Request > urls.py > views.py > models.py > main.html > html response
+3. In my mind, it's for ease-of-use, as I recall, like in our first year's task where we need to make a website for our peers, and the easiest is to use github to supervise the project while also making it accessible.
+4. The easiest (since it's using python).
+5. Because it could interact directly with the database (in this instace, using python to read .csv)

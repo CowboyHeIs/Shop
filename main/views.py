@@ -15,7 +15,10 @@ def show_main(request):
             })
 
     context = {
-        'products': products
+        'products': products,
+        'real_name' : 'Heinrich Edric Damadika Suselo',
+        'real_class' : 'KKI',
+        'npm' : 2306256356
     }
 
     return render(request, "main.html", context)
