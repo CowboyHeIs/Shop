@@ -2,9 +2,14 @@
 <html>
 <head>
   <title>Shopify</title>
+  {% load static %}
   <style>
     body {
-      background-color: #12003d; /* Darker purplish blue */
+      background-color: #12003d; /* Fallback color */
+      background-image: url('{% static "main/space.png" %}'); /* Background image in the same directory */
+      background-size: cover; /* Cover the entire screen */
+      background-position: center; /* Center the image */
+      background-attachment: fixed; /* Fix the background in place */
       color: #e0e0e0;
       font-family: Palatino Linotype, sans-serif;
       margin: 0;
@@ -14,9 +19,9 @@
     .shop-header {
       text-align: center;
       padding: 20px;
-      background-color: rgba(46, 46, 46, 0);
+      background-color: transparent; /* Ensure header is transparent */
       position: relative;
-      z-index: 10;
+      z-index: 1; /* Ensure content is above background */
     }
 
     .shop-name {
@@ -32,18 +37,18 @@
       max-width: 800px; /* Max width in pixels */
       width: 80%; /* Adjust width to fit the container */
       margin: 0 auto;
-      background-color: #2e2e2e; /* Dark grey */
+      background-color: rgba(46, 46, 46, 0.8); /* Slight transparency */
       border-radius: 8px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
       position: relative;
-      z-index: 5;
+      z-index: 1; /* Ensure it's above the background */
     }
 
     .product-info {
       margin-bottom: 15px;
       padding: 15px;
       border-radius: 10px;
-      background-color: #333;
+      background-color: rgba(51, 51, 51, 0.9); /* Slight transparency */
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
       max-width: 100%;
     }
@@ -53,7 +58,7 @@
       font-size: 3vw;
     }
 
-    .product-price, .product-description {
+    .product-price, .product-description, .product-id {
       color: #b0bec5;
     }
 
@@ -62,13 +67,14 @@
     }
 
     footer {
-      background-color: #12003d; /* Dark purplish blue */
+      background-color: transparent; /* Make footer transparent */
       color: #b0bec5;
       text-align: center;
       padding: 10px;
       position: relative;
       bottom: 0;
       width: 100%;
+      z-index: 1;
     }
 
     @media (max-width: 768px) {
@@ -94,6 +100,7 @@
           <h2 class="product-title">{{ product.product }}</h2>
           <p class="product-price"><strong>Price:</strong> {{ product.price }}</p>
           <p class="product-description"><strong>Description:</strong> {{ product.desc }}</p>
+          <p class="product-id"><strong>Product ID:</strong> {{ product.id }}</p>
         </div>
       {% endfor %}
     </section>

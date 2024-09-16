@@ -1,8 +1,8 @@
-products,price,desc
-Aqua 330ml,3.400,Mineral Water
-Bintang 0.0% Can,9.800,Non-alcoholic soft drink
-Bintang Lemon 0.0% Can,10.000,Non-alcoholic soft drink
-Coca-cola 250ml,6.000,Soft drink
-Ichi Ocha 330ml,7.500,Tea
-Indomaret Jasmine Tea 330ml,3.300,Tea
-Indomaret Lemon Tea 330ml,4.300,Tea
+products,price,desc,id
+Aqua 330ml,3.400,Mineral Water,001
+Bintang 0.0% Can,9.800,Non-alcoholic soft drink,101
+Bintang Lemon 0.0% Can,10.000,Non-alcoholic soft drink,102
+Coca-cola 250ml,6.000,Soft drink,301
+Ichi Ocha 330ml,7.500,Tea,401
+Indomaret Jasmine Tea 330ml,3.300,Tea,402
+Indomaret Lemon Tea 330ml,4.300,Tea,403
