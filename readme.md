@@ -1,18 +1,36 @@
 Questions :
-1. Explain how you implemented the checklist above step-by-step (not just following the tutorial).
-2. Create a diagram that contains the request client to a Django-based web application and the response it gives, and explain the relationship between urls.py, views.py, models.py, and the html file.
-3. Explain the use of git in software development!
-4. In your opinion, out of all the frameworks available, why is Django used as the starting point for learning software development?
-5. Why is the Django model called an ORM?
+1. Explain why we need data delivery in implementing a platform.
+2. In your opinion, which is better, XML or JSON? Why is JSON more popular than XML?
+3. Explain the functional usage of `is_valid()` method in Django forms. Also explain why we need the method in forms.
+4. Why do we need `csrf_token` when creating a form in Django? What could happen if we did not use `csrf_token` on a Django form? How could this be leveraged by an attacker?
+5. Explain how you implemented the checklist above step-by-step (not just following the tutorial).
 
-Answer :
-1. By failing multiple times I could know where it went wrong. Then I read the assignment trying to understand it the best that i can (hopefully no missunderstandings) and add some features I'm willing to try. got info from w3schools.com then start using products. here's the steps :
-	1. Redo Tutorial 0 for 3 weeks due to failure in many attemps due to missunderstandings on my part on which should be with which, what is what, and anything inside.
-	2. After succesfully deploying tutorial 0, I went straight to Assignment2 due to fear of being late.
-	3. Follow tutorial 1 with few but more than 3 missunderstandings (luckily).
-	4. Learn about the application connections (as in what goes to where).
-	5. Learn HTML due to my hatred towards light mode.
-2. Request > urls.py > views.py > models.py > main.html > html response
-3. In my mind, it's for ease-of-use, as I recall, like in our first year's task where we need to make a website for our peers, and the easiest is to use github to supervise the project while also making it accessible.
-4. The easiest (since it's using python).
-5. Because it could interact directly with the database (in this instace, using python to read .csv)
+Answers :
+1. Ensures accuracy and efficiency on data transfer between systems.
+2. JSON
+-- Simple
+-- Smaller
+-- Faster parsing
+3. Ensures data integrity and error handling by validating form data.
+4. Prevents attackers that exploit from submissions by verifying requests.
+5. 
+-- Added id in `Products.csv`
+-- Added `ProductForm` in `main/forms.py`
+-- Added `add_product`, `all_objects_xml`, `all_objects_json`, `object_by_id_xml`, `object_by_id_json` views
+-- Updated `main/urls.py`
+-- Due to warning message, consulted with my uncle, thus added `static` directory.
+-- Added `add_product.html`
+
+## Screenshots
+
+### SC JSON
+![JSON ID:ALL](sc_json)
+
+### SC XML
+![XML ID:ALL](sc_xml)
+
+### SC XML 001
+![XML ID:001](sc_xml_001)
+
+### SC JSON 101
+![JSON ID:101](sc_json_101)
