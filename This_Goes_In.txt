@@ -1,9 +1,0 @@
-<<<<<<< HEAD
-Username:secret
-Password:secret
-=======
-Username: heinrich.edric
-Password: iL_jLcOgqNvewaRaE363cP2CI-jlr3Os
-
-.gitignore
->>>>>>> 792e441 (Added main/add, main/xlm, main/json, main/xml<id>, main/json/<id>)
