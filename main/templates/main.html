@@ -6,7 +6,7 @@
   <style>
     body {
       background-color: #12003d; /* Fallback color */
-      background-image: url('{% static "main/space.png" %}'); /* Background image in the same directory */
+      background-image: url('{% static "main/space.png" %}'); /* Background image */
       background-size: cover; /* Cover the entire screen */
       background-position: center; /* Center the image */
       background-attachment: fixed; /* Fix the background in place */
@@ -30,6 +30,14 @@
       margin-top: 0;
       margin-bottom: 0;
       text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7);
+    }
+
+    .shop-slogan {
+      color: #ffffff; /* White color */
+      font-size: 3vw; /* Same font size as shop name but smaller */
+      margin-top: 0;
+      margin-bottom: 10px; /* Space between shop name and slogan */
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     }
 
     .product-details {
@@ -97,6 +105,10 @@
         font-size: 12vw;
       }
 
+      .shop-slogan {
+        font-size: 4vw;
+      }
+
       .product-title {
         font-size: 4vw;
       }
@@ -110,6 +122,7 @@
 <body>
   <header class="shop-header">
     <h1 class="shop-name">Bhat Eet</h1>
+    <h2 class="shop-slogan">Where You’ve Found It!</h2>
   </header>
 
   <main>
