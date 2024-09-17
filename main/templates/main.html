@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Shopify</title>
+  <title>Bhat Eet</title>
   {% load static %}
   <style>
     body {
@@ -77,6 +77,21 @@
       z-index: 1;
     }
 
+    /* Add Product button styling */
+    .add-product-button {
+      background-color: rgba(51, 51, 51, 0.9);
+      color: #ff9800; /* Orange color */
+      padding: 15px 30px;
+      border: none;
+      border-radius: 10px;
+      font-size: 1.5vw;
+      cursor: pointer;
+      width: 100%; /* Same width as the product details */
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+      font-weight: bold; /* Bold text */
+      text-align: center;
+    }
+
     @media (max-width: 768px) {
       .shop-name {
         font-size: 12vw;
@@ -85,12 +100,16 @@
       .product-title {
         font-size: 4vw;
       }
+
+      .add-product-button {
+        font-size: 3.5vw;
+      }
     }
   </style>
 </head>
 <body>
   <header class="shop-header">
-    <h1 class="shop-name">Shopify</h1>
+    <h1 class="shop-name">Bhat Eet</h1>
   </header>
 
   <main>
@@ -103,6 +122,13 @@
           <p class="product-id"><strong>Product ID:</strong> {{ product.id }}</p>
         </div>
       {% endfor %}
+      
+      <!-- Add Product button -->
+      <div class="product-info">
+        <a href="/add" style="text-decoration: none;">
+          <button class="add-product-button">Add Product</button>
+        </a>
+      </div>
     </section>
   </main>
 
