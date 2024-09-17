@@ -2,13 +2,111 @@
 <html>
 <head>
     <title>Add Product</title>
+    {% load static %}
+    <style>
+        body {
+            background-color: #12003d; /* Fallback color */
+            background-image: url('{% static "main/space.png" %}'); /* Background image */
+            background-size: cover; /* Cover the entire screen */
+            background-position: center; /* Center the image */
+            background-attachment: fixed; /* Fix the background in place */
+            color: #e0e0e0;
+            font-family: Palatino Linotype, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            text-align: center;
+            padding: 20px;
+            background-color: transparent; /* Ensure header is transparent */
+            position: relative;
+            z-index: 1; /* Ensure content is above background */
+        }
+
+        .header h1 {
+            color: #00ff00; /* Green color */
+            font-size: 8vw; /* Font size for header */
+            margin-top: 0;
+            margin-bottom: 0;
+            text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7);
+        }
+
+        .form-container {
+            padding: 15px;
+            max-width: 600px; /* Max width for form */
+            width: 80%; /* Adjust width to fit the container */
+            margin: 20px auto;
+            background-color: rgba(51, 51, 51, 0.9); /* Dark grey with slight transparency */
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+            position: relative;
+            z-index: 1; /* Ensure it's above the background */
+        }
+
+        .form-container h1 {
+            color: #ffffff;
+            font-size: 2.5vw;
+        }
+
+        .form-container form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-container form label {
+            color: #ffffff; /* White text */
+            margin-bottom: 5px;
+        }
+
+        .form-container form .label-bold {
+            font-weight: bold;
+            color: #ff9800; /* Orange color */
+        }
+
+        .form-container form input, .form-container form textarea {
+            margin-bottom: 15px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #b0bec5;
+            background-color: #333;
+            color: #e0e0e0;
+        }
+
+        .form-container form button {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #00ff00; /* Green color */
+            border: none;
+            border-radius: 5px;
+            color: #12003d;
+            font-size: 1.2em;
+            cursor: pointer;
+        }
+
+        .form-container form button:hover {
+            background-color: #00cc00; /* Darker green on hover */
+        }
+    </style>
 </head>
 <body>
-    <h1>Add New Product</h1>
-    <form method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Add Product</button>
-    </form>
+    <header class="header">
+        <h1>Add Product</h1>
+    </header>
+
+    <main>
+        <section class="form-container">
+            <form method="post">
+                {% csrf_token %}
+                <label class="label-bold">Product:</label>
+                {{ form.product }}
+                <label class="label-bold">Price:</label>
+                {{ form.price }}
+                <label class="label-bold">Desc:</label>
+                {{ form.desc }}
+                <button type="submit">Add Product</button>
+            </form>
+        </section>
+    </main>
 </body>
 </html>
